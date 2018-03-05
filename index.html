@@ -9,32 +9,41 @@
 	 <head>
 	 	<link rel="stylesheet" type="text/css" href="style.css">
 	 	<body background="img/bg.jpg">
-	 		<title>Página web</title>
-	 	</head>
+	 	<title>Página web</title>
+	 </head>
 	 	<header>
 	 		<h1 class= "pp"> Primera página web en HTML5 </h1>
+	 		<center>
+	 		<nav>
+	 			<a href= "#Fotos" title="Fotos" class="pp"> Fotos </a> |
+	 			<a href= "#Biografía" title= "Biografía" class="pp"> Biografía </a> |
+	 		</nav>
+	 	</center>
 	 	</header>
 	 	<body>
 	 		<center>
 
 	 			<!--<h1 class="pp">Ejemplo de página web</h1>-->
 
-	 			<article>			
-	 				<div id="foto1">
+	 			<article>	
+	 			<a name= "Fotos">
+	 				<h2 class="pp"> Fotos </h2>
+	 			</a>
+	 				<section id="foto1">
 	 					<a href="img/img.jpg">
 	 						<img width="475" height= "234" src="img/img.jpg">
 	 					</a>
-	 				</div>
-	 				<div id="foto2">
+	 				</section>
+	 				<section id="foto2">
 	 					<a href="img/img2.jpg">
 	 						<img width="362" height= "234" src="img/img2.jpg">
 	 					</a>
-	 				</div>
-	 				<div id="foto3">
+	 				</section>
+	 				<section id="foto3">
 	 					<a href="img/img3.jpg">
 	 						<img width="224" height= "234" src="img/img3.jpg">
 	 					</a>
-	 				</div>
+	 				</section>
 	 			</article>
 
 	 		</center>
@@ -42,6 +51,9 @@
 
 
 	 			<article>
+	 				<a name= "Biografía">
+	 					<h2 class="pp"> Biografía </h3>
+	 				</a>
 	 				<section class= "parrafo">
 	 					<p class="pp"> 
 	 						Buenos/as días/tardes/noches, mi nombre es Marcos Alejandro Pérez Ramírez, nací el 18 de febrero de 1998 en Cancún, Quintana Roo, México. Actualmente estoy estudiando la carrera de Ingeniería en Datos e Inteligencia Organizacional en la Universidad del Caribe. 
@@ -79,5 +91,8 @@
 	 		<p>
 	 			Marcos Alejandro Pérez Ramírez, 160300154
 	 		</p>
+	 		<aside>
+	 			Contacto: 160300154@ucaribe.edu.mx
+	 		</aside>
 	 	</footer>
 	 	</html>
