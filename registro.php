@@ -66,7 +66,7 @@
 	 			if($pass === $pass2){
 	 				
 	 				
-	 				$query= "INSERT INTO usuarios (usuario, pass, correo) VALUES('$usu', '$pass', '$correo');";
+	 				$query= "INSERT INTO registros (usuario, password, correo) VALUES('$usu', '$pass', '$correo');";
 	 				#$conn = new mysqli("mysql:host=$servername;dbname=$DBname", $username, $password);
 	 				
 	 				$conn = new mysqli($servername, $username, $password, $DBname);
