@@ -55,11 +55,18 @@ h1{
 
 }
 
-form{
+.login{
 	/*margin-left: 15%;*/
 	border: 2px solid black;
 	background-color: lightblue;
 	text-align: center;
 	width: 20%;
 	height: 70px;
+}
+
+.registro{
+	border: 2px solid black;
+	background-color: lightblue;
+	text-align: center;
+	width: 20%;
 }

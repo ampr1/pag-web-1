@@ -12,7 +12,8 @@
 	 			<nav>
 	 				<a href= "index.html" title="Fotos" class="pp"> Fotos </a> |
 	 				<a href= "index.html" title= "Biografía" class="pp"> Biografía </a> |
-	 				<a href= "login.php" class="pp"> Login </a>
+	 				<a href= "login.php" class="pp"> Login </a> |
+	 				<a href= "registro.php" class="pp"> Registro </a>
 	 			</nav>
 	 		</center>
 	 	</header>
@@ -20,7 +21,7 @@
 	 		<center>
 	 			<br>
 	 			<br>
-	 			<form>
+	 			<form class= "registro">
 	 				Usuario: 
 	 				<input type="text" name= "usuario" id= "usuario">
 	 				<br>
