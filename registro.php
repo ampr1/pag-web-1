@@ -37,11 +37,11 @@
 	 				<br>
 	 				Contraseña: 
 	 				<br>
-	 				<input type="password" name="contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+	 				<input type="password" name="contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title= "Debe contener al menos 1 número, una mayúscula, una minúscula, y al menos 8 caracteres.">
 	 				<br>
 	 				Repetir contraseña:
 	 				<br>
-	 				<input type="password" name="contraseña2" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+	 				<input type="password" name="contraseña2" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title= "Debe contener al menos 1 número, una mayúscula, una minúscula, y al menos 8 caracteres.">
 	 				<br>
 	 				<br>
 	 				<input type="submit" name="submit">
@@ -66,7 +66,7 @@
 	 			if($pass === $pass2){
 	 				
 	 				
-	 				$query= "INSERT INTO registros (usuario, password, correo) VALUES('$usu', '$pass', '$correo');";
+	 				$query= "INSERT INTO usuarios (usuario, pass, correo) VALUES('$usu', '$pass', '$correo');";
 	 				#$conn = new mysqli("mysql:host=$servername;dbname=$DBname", $username, $password);
 	 				
 	 				$conn = new mysqli($servername, $username, $password, $DBname);
@@ -75,7 +75,19 @@
 	 				$conn->query($query);
     				$conn= null;
 	 			}
+	 			else{
+	 				echo "Las contraseñas no coinciden";
+	 			}
 	 		}
-	 		
-	 		
-	 	?>
+	 		?>
+	 	</body>
+	 	<footer>
+	 		<p>
+	 			Marcos Alejandro Pérez Ramírez, 160300154
+	 		</p>
+	 		<aside>
+	 			Contacto: 160300154@ucaribe.edu.mx
+	 		</aside>
+	 	</footer>
+	 	</html>
+
