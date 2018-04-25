@@ -33,21 +33,44 @@
 	 				<br>
 	 				Correo:
 	 				<br>
-	 				<input type="text" name="correo">
+	 				<input type="email" name="correo">
 	 				<br>
 	 				Contraseña: 
 	 				<br>
-	 				<input type="password" name="contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title= "Debe contener al menos 1 número, una mayúscula, una minúscula, y al menos 8 caracteres.">
+	 				<input type="password" name="contraseña" id= "pass1" pattern="(?=.*[`~!@#$%^&*);'[\]\x22{}])(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title= "Debe contener al menos 1 número, una mayúscula, una minúscula, un caracter especial y al menos 8 caracteres.">
 	 				<br>
 	 				Repetir contraseña:
 	 				<br>
-	 				<input type="password" name="contraseña2" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title= "Debe contener al menos 1 número, una mayúscula, una minúscula, y al menos 8 caracteres.">
+	 				<input type="password" name="contraseña2" id= "pass2" pattern="(?=.*[`~!@#$%^&*);'[\]\x22{}])(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title= "Debe contener al menos 1 número, una mayúscula, una minúscula, un caracter especial y al menos 8 caracteres." onkeyup= "confirmar(); return false;">
 	 				<br>
+	 				<span id="mensaje"></span>
 	 				<br>
 	 				<input type="submit" name="submit">
 	 				</form>
 	 		</center>
+	 		<center>
+	 		<script>
+	 			function confirmar()
+	 			{
+	 				var pass1= document.getElementById('pass1');
+	 				var pass2= document.getElementById('pass2');
+	 				var message= document.getElementById('mensaje');
 
+	 				if (pass1.value == pass2.value){
+	 					pass2.style.backgroundColor = 'green';
+
+	 				}
+	 				else{
+	 					pass2.style.backgroundColor= 'red';
+	 					message.style.color= 'red';
+	 					message.innerHTML= "Las contraseñas no son iguales"
+	 				}
+	 			}
+
+	 		</script>
+	 	
+	 	
+	 		
 	 		<?php
 	 		session_start();
 	 		$servername = "localhost:3306";
@@ -75,11 +98,9 @@
 	 				$conn->query($query);
     				$conn= null;
 	 			}
-	 			else{
-	 				echo "Las contraseñas no coinciden";
-	 			}
 	 		}
-	 		?>
+	 		?> 
+	 	</center>
 	 	</body>
 	 	<footer>
 	 		<p>
