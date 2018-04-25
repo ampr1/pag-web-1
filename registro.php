@@ -100,7 +100,7 @@
 	 					echo "Registrado :D";
 	 				}
 	 				else{
-	 					echo $con->error;
+	 					echo $conn->error;
 	 				}
 	 				
     				$conn-> close();
