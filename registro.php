@@ -70,7 +70,7 @@
 	 		</script>
 	 	
 	 	
-	 		
+	 		<center>
 	 		<?php
 	 		session_start();
 	 		$servername = "localhost:3306";
@@ -83,7 +83,6 @@
 	 			$pass= $_GET['contraseña'];
 	 			$pass2= $_GET['contraseña2'];
 	 			$correo= $_GET['correo'];
-	 			echo ($usu);
 	 			#if($usu === $user && $password === $pass){
 	 				#header("Location: success.jpg");
 	 			#}
@@ -97,6 +96,7 @@
 	 			
 	 				#echo $query;
 	 				$conn->query($query);
+	 				echo "Registrado :D";
     				$conn-> close();
 	 			}
 	 		}
