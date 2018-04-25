@@ -93,10 +93,16 @@
 	 				#$conn = new mysqli("mysql:host=$servername;dbname=$DBname", $username, $password);
 	 				
 	 				$conn = new mysqli($servername, $username, $password, $DBname);
-	 			
+	 
+
 	 				#echo $query;
-	 				$conn->query($query);
-	 				echo "Registrado :D";
+	 				if($conn->query($query) === TRUE){
+	 					echo "Registrado :D";
+	 				}
+	 				else{
+	 					echo "error";
+	 				}
+	 				
     				$conn-> close();
 	 			}
 	 		}
