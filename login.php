@@ -1,8 +1,17 @@
+<!--login.php 
+	Marcos Alejandro Pérez Ramírez
+	 160300154
+	 Ingeniería en Datos e Inteligencia Organizacional
+	 
+-->
+
+
  <!DOCTYPE html>
 	 <html>
 	 	<meta charset="UTF-8">
 	 	<head>
 	 		<link rel="stylesheet" type="text/css" href="style.css">
+	 		<script src="script/script.js"></script> 
 	 		<body background="img/bg.jpg">
 	 		<title>Página web</title>
 	 	</head>
@@ -26,15 +35,18 @@
 	 				<input type="text" name= "usuario" id= "usuario">
 	 				<br>
 	 				Contraseña: 
-	 				<input type="password" name="contraseña">
+	 				<input type="password" name="contraseña" pattern="(?=.*[`~!@#$%^&*);'[\]\x22{}])(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title= "Debe contener al menos 1 número, una mayúscula, una minúscula, un caracter especial y al menos 8 caracteres." id = "contraseña">
 	 				<br>
-	 				<input type="submit" name="submit">
+	 				<input type="submit" name="submit" onclick= "validarLogIn();">
 	 				</form>
+	 				<p class= "pp">Universidad <br> Caribe123*</p>
+
 	 		</center>
+
+
 	 	<?php
-	 		session_start();
 	 		$user= "Universidad";
-	 		$password= "Caribe";
+	 		$password= "Caribe123*";
 	 		if (isset($_GET['submit']))
 	 		{
 
