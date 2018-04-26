@@ -11,7 +11,7 @@
 	 	<meta charset="UTF-8">
 	 	<head>
 	 		<link rel="stylesheet" type="text/css" href="style.css">
-	 		<script src="script/script.js"></script> 
+	 		<script src="script.js"></script> 
 	 		<body background="img/bg.jpg">
 	 		<title>Página web</title>
 	 	</head>
